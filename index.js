@@ -19,7 +19,7 @@ function final(){
 };
 
 
-function abc(array){
+function currentLevel(array){
 
 function quiz(question,answer){
 
@@ -37,6 +37,7 @@ var userAnswer = readlineSync.question(question);
 
 
 for(var i=0; i<array.length; i++){
+  
   quiz(array[i].question,array[i].answer);
   console.log(color("The correct answer is: " +array[i].answer ));
   var exit = readlineSync.keyIn("Press e to exit the quiz or press any other key to continue \n", {limit:'$<a-z>'})
@@ -69,7 +70,7 @@ answer:"b"},
 answer:"a"},
 ];
 
-abc(level1);
+currentLevel(level1);
 
 if(score>=3.5){
 
@@ -96,11 +97,12 @@ if(score>=3.5){
 
  ];
 
-abc(level2);
+currentLevel(level2);
 
 final();
 
 }
+
 else{
 final();
 };
